@@ -1,4 +1,4 @@
-This is a method and effect that provoke that when you pass the mouse over a link an emergent window appear where it can be previewed the linked page.
+This is simple css and js that provoke that when you pass the mouse over a link an emergent window appear where it can be previewed the linked page.
 
 This is basically a css effect but the content of the iframes are loaded via javascript in the moment you pass the mouse over links.
 
