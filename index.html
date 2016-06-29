@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/javascript.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="boxht" class="cint"> <!-- the id is for the popup window characteristics personalized in the css, the class cint is only for the effect of images (stones) in the border of the popup, you can erase it here if you dont want this kind of effect -->
+        <iframe id="myframe" frameBorder="0"></iframe>
+    </div>
+    <article>
+      <h1>Linked page on popup Window</h1>
+      <h3>When you pass the mouse over a link the referenced page is loaded and shown in a popup window.</h3>
+      <p><b>(In this case some decoration is applied also by css, the popup window have a pair of images in two of the corners):</b></p>
+       <ul>
+           <li>Try to pass mouse over the following link to a internal example <a href="examplelinks/example1.html" target="_blank" onmouseout="boxhtOut()" onMouseOver="boxhtIn(); loadintoIframe(this.href)">page</a></li>
+           <li>............................. Here another internal example <a href="examplelinks/example2.html" target="_blank" onmouseout="boxhtOut()" onMouseOver="boxhtIn(); loadintoIframe(this.href)">page</a></li>
+           <li>This link is to a external <a href="http://www.ncbi.nlm.nih.gov/" target="_blank" onmouseout="boxhtOut()" onMouseOver="boxhtIn(); loadintoIframe(this.href)">webpage</a></li>
+           <li>This link is to a external <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4224074/pdf/fnint-08-00084.pdf" target="_blank" onmouseout="boxhtOut()" onMouseOver="boxhtIn(); loadintoIframe(this.href)">PDF</a></li>
+           <li>This link is to a internal <a href="examplelinks/fnint-08-00084.pdf" target="_blank" onmouseout="boxhtOut()" onMouseOver="boxhtIn(); loadintoIframe(this.href)">PDF</a></li>
+       </ul>
+       <p>The effect is good for desktop computers but not very useful on touchpad and small screens, <br>in in this case I simply deactivate the popup visualization when window is less of 750px of width</p>
+    </article>
+
+</body>
+</html>

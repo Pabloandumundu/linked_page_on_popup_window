@@ -1,0 +1,61 @@
+#myframe {
+    position: fixed;
+    width: 35%; /* it can vary but must be the same as #boxth (the div that contain the iframe) */
+    height: 65%; /* same */
+}
+#boxht{
+    display: none;
+    position:fixed;
+    z-index: 100;
+    width: 35%;
+    height: 65%;
+    top:16%; /* position of the iframe container */
+    left:60%; /* position of the iframe container */
+    padding-bottom:0px;
+    border: 2px solid #dfdfdf;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background:#ffffbb;
+}
+
+/* The following lines are where the images of stones (as decorative frame) are linked and positioned in border top-left and bottom-left, if you don´t want any effect of this kind simply delete the following lines */
+.cint:before, .cint:after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+.cint:before {
+    z-index: 110;
+    bottom:-40px;
+    left:-30px;
+    height:79px;
+    width:85px;
+    background-image:url(../img/piedra2c.png);
+    -webkit-transform: rotate(-50deg);
+    -moz-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+}
+.cint:after {
+    z-index: 110;
+    top: -42px;
+    right:-20px;
+    width: 93px;
+    height:80px;
+    background-image:url(../img/piedra1.png);
+    -webkit-transform: rotate(-12deg);
+    -moz-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+}
+
+/* The following lines is to deactivate the effect on screens with window width less than 750px */
+@media only screen and (max-width:750px), handheld {
+	.cint:before {
+		background-image: none
+	}
+	.cint:after {
+		background-image: none
+	}
+	#boxht {width: 0; height: 0}
+	#myframe {width: 0; height: 0}
+}
